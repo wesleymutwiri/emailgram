@@ -5,12 +5,27 @@ import UserAuth from '@/components/UserAuth'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path:'/chats',
+      name: 'Chat',
+      component: Chat
+    },
+    {
+      path: '/auth',
+      name: 'UserAuth',
+      component:UserAuth
     }
   ]
 })
+
+router.beforeEach((to,from, next)=>{
+  if (sessionStorage.getItem('authToken') !== null || to.path == '/auth'){
+    next()
+  }
+  else {
+  next('/auth')
+}
+})
+export default router
