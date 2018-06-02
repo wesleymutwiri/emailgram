@@ -22,11 +22,21 @@
                             <input type="text" v-model="username" id="username" class="form-control" placeholder="Username" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="password" v-model="password" id="password" class="form-control">
+                            <input type="password" v-model="password" id="password" class="form-control" placeholder="Password" required>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="toc" required>
+                            <label for="gridCheck" class="form-check-label">
+                            Accept terms and Conditions
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-primary">Sign Up</button>
                 </form>
             </div>
+            <div class="tab-pane fade" id="signin" role="tabpanel" aria-labelledby="signin-tab"></div>
         </div>
     </div>
 </div>
