@@ -25,6 +25,7 @@ There are currently no known bugs experienced on the website but feedback on bug
 * django
 * Heroku
 * Git
+* Vue js
 
 ## Support and contact details
 Contact me on my github account
