@@ -87,4 +87,6 @@ class ChatSessionMessageView(APIView):
             user=user, chat_session=chat_session, message=message
         )
 
-        
+        return Response({
+            'status': 'SUCCESS', 'uri':chat_session.uri, 'message':message, 'user':deserialize_user(user)
+        })
