@@ -65,3 +65,26 @@ class ChatSessionMessageView(APIView):
         '''
         return all messages in a chat session
         '''
+        uri = kwargs['uri']
+        chat_session = ChatSession.objects.get(uri=uri)
+        message = [chat_session_message.to_json() 
+            for chat_session_message in chat_session.messages.all()]
+        return Response({
+            'id': chat_session.id, 'uri':chat_session.uri, 
+            'messages': messages
+        })
+
+    def post(self, request,*args, **kwargs):
+        '''
+        create a new message in a chat session
+        '''
+        uri = kwargs['uri']
+        message = request.data['message']
+        user = request.user 
+        chat_session = ChatSession.objects.get(uri=uri)
+
+        ChatSessionMessage.objects.create(
+            user=user, chat_session=chat_session, message=message
+        )
+
+        
