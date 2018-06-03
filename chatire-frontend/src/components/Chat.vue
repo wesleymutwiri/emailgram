@@ -8,7 +8,9 @@
                     </div>
                     <div class="card-body">
                         <div class="container chat-body">
-                            <div class="row chat-section">
+                            <div v-for="message in messages" :key="message.id" class="row chat-section">
+                                <template v-if="username === message.user.username">
+
                                 <div class="col-sm-2">
                                     <img src="http://placehold.it/40/f16000/fff&text=D" alt="" class="rounded-circle">
                                 </div>
@@ -19,21 +21,24 @@
                             <div class="row chat-section">
                                 <div class="col-sm-7 offset-3">
                                     <span class="card-text speech-bubble speech-bubble-user float-right text-white subtle-blue-gradient">
-                                        Whatsup, another chat app?
+                                        {{ message.message }}
 
                                     </span>
                                 </div>
                                 <div class="col-sm-2">
-                                    <img src="http://placehold.it/40/f16000/fff&text=D" alt="" class="rounded-circle">
+                                    <img src="`http://placehold.it/40/007bff/fff&text=${message.user.username[0].toUpperCase()}`" alt="" class="rounded-circle">
                                 </div>
                             </div>
+                                </template>
+                                <template v-else>
+                                    
                             <div class="row chat-section">
                                 <div class="col-sm-2">
-                                    <img src="http://placehold.it/40/f16000/fff&text=D" alt="" class="rounded-circle">
+                                    <img src="`http://placehold.it/40/333333/fff&text=${message.user.username[0].toUpperCase()}`" alt="" class="rounded-circle">
                                 </div>
                                 <div class="col-sm-7">
                                     <p class="card-text speech-bubble speech-bubble-peer">
-                                        Yes this is Emailgram, It's a pretty cool app that is open source an it was built using Django and Vue Js 
+                                       {{ message.message }} 
                                     </p>
                                 </div>
                             </div>
