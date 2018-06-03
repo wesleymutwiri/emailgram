@@ -68,8 +68,9 @@
                     </h3>
                     <br>
                     <p class="text-center">
-                        To start chatting with friends click on the button below and start a new chat
+                        To start chatting with friends click on the button below and start a new chat session and then you can invite friends over to chat
                     </p>
+                    <br>
                 </div>
             </div>
         </div>
