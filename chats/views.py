@@ -35,3 +35,16 @@ class ChatSessionView(APIView):
         chat_session = ChatSession.objects.get(uri=uri)
         owner = chat_session.owner 
         
+        # function to allow only none owners to join the chat room
+        
+        if owner != user: 
+            chat_session.membeers.get_or_create(user=user, chat_session=chat_session)
+        
+        owner = deserialize_user(owner)
+        members = [
+            deserialize_user(chat_session.user)
+            for chat_session in chat_session.membeers.all()
+        ]
+        # function that makes the owner th first member of the group
+        members.insert(0,owner)
+        
