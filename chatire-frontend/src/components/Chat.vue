@@ -89,7 +89,13 @@
             }
         },
         created () {
-            th
+            this.username = sessionStorage.getItem('username')
+        },
+        methods: {
+            startChatSession () {
+                this.sessionStarted = true
+                this.$router.push('/chats/chat_url')
+            }
         }
     }
 </script>
