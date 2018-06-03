@@ -39,13 +39,37 @@
                             </div>
                             <div class="row chat-section">
                                 <div class="col-sm-7 offset-3">
-                                    <p class="card-text">
-                                        
+                                    <p class="card-text speech-bubble speech-bubble-user float-right text-white subtle-blue-gradient">
+                                        Welcome 
                                     </p>
+                                </div>
+                                <div class="col-sm-2">
+                                    <img src="http://placehold.it/40/f16000/fff&text=D" alt="" class="rounded-circle">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="card-footer text-muted">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <input type="text" placeholder="Type a message">
+                                </div>
+                                <div class="col-sm-2">
+                                    <button class="btn btn-primary">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div v-else>
+                    <h3 class="text-center">
+                        Welcome
+                    </h3>
+                    <br>
+                    <p class="text-center">
+                        To start chatting with friends click on the button below and start a new chat
+                    </p>
                 </div>
             </div>
         </div>
