@@ -98,6 +98,9 @@ export default {
 <style scoped>
 h1, h2 {
   font-weight: normal;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  text-align: center;
 }
 ul {
   list-style-type: none;
@@ -110,4 +113,6 @@ li {
 a {
   color: #42b983;
 }
+
+
 </style>

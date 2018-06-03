@@ -65,7 +65,7 @@ export default {
         }
     }
 methods: {
-    signUp() {
+    signUp (){
         $.post('http://localhost:8000/auth/users/create/', this.$data, (data) => {
             alert("Your account has been created. You will be signed in automatically")
             this.signIn()
@@ -75,7 +75,7 @@ methods: {
         })
     },
 
-    signIn () {
+    signIn (){
         const credentials = {username: this.username, password: this.password}
 
         $.post('http://localhost:8000/auth/token/create/', credentials, (data) =>{
@@ -96,4 +96,22 @@ methods: {
 .tab-content {
     padding-top: 20px;
 }
+h1, h2 {
+  font-weight: normal;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+
 </style>
