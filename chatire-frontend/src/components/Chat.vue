@@ -37,11 +37,13 @@
                                     <img src="`http://placehold.it/40/333333/fff&text=${message.user.username[0].toUpperCase()}`" alt="" class="rounded-circle">
                                 </div>
                                 <div class="col-sm-7">
-                                    <p class="card-text speech-bubble speech-bubble-peer">
+                                    <span class="card-text speech-bubble speech-bubble-peer">
                                        {{ message.message }} 
-                                    </p>
+                                    </span>
                                 </div>
+
                             </div>
+                                </template> 
                             <div class="row chat-section">
                                 <div class="col-sm-7 offset-3">
                                     <p class="card-text speech-bubble speech-bubble-user float-right text-white subtle-blue-gradient">
@@ -90,9 +92,10 @@
     export default {
         data () {
             return {
-                sessionStarted: false
+                sessionStarted: false, messages: [], message: ''
             }
         },
+
         created () {
             this.username = sessionStorage.getItem('username')
         
@@ -115,6 +118,13 @@
                 .fail((response)=> {
                     alert(response.responseText)
                 })
+                postMessage (event) {
+                    const data = {message: thos.message}
+                    $.post(`htttp://localhost:8000/api/chats/${this.$route.params.uri}/messages/`,data ,(data)=> 
+                    {
+                    this,messages.push(data)
+                    this.message= ''
+                }
             }
         }
     }
