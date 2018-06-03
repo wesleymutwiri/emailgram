@@ -116,7 +116,7 @@ REST_FRAMEWORK = {
     (...)
     ),
 }
-localStorage.removeItem('authToken')
+# localStorage.removeItem('authToken')
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
