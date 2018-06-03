@@ -90,11 +90,26 @@
         },
         created () {
             this.username = sessionStorage.getItem('username')
+        
+        $.ajaxSetup({
+            headers: {
+                'Authorization': `Token ${sessionStorage.getItem('authToken')}`
+            }
+        })
+        
         },
+
         methods: {
             startChatSession () {
-                this.sessionStarted = true
-                this.$router.push('/chats/chat_url')
+                $.post('htttp://localhost:8000/api/chats/', (data)=> {
+                    alert("A new session has been created you'll be redirected automatically")
+                    this.sessionStarted = true
+                    this.$router.push('/chats/chat_url')
+
+                })
+                .fail((response)=> {
+                    alert(response.responseText)
+                })
             }
         }
     }
