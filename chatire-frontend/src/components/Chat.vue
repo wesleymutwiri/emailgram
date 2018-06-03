@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="card-footer text-muted">
-                        <form>
+                        <form @submit.prevent="postMessage"> 
                             <div class="row">
                                 <div class="col-sm-10">
                                     <input type="text" placeholder="Type a message">
