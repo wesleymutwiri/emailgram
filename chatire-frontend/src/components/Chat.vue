@@ -71,8 +71,12 @@
                         To start chatting with friends click on the button below and start a new chat session and then you can invite friends over to chat
                     </p>
                     <br>
+                    <button @click="startChatSession" class="btn btn-primary btn-lg btn-block">
+                        Start Chatting
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
