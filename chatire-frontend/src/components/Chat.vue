@@ -186,6 +186,19 @@ li {
     
 }
 
+.chat-section:first-child {
+    margin-top: 10px;
+}
+
+.chat-section {
+    margin-top: 15px;
+}
+
+.send-section {
+    margin-bottom: -20px;
+    padding-bottom: 10px;
+}
+
 
 
 
