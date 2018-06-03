@@ -36,8 +36,40 @@
                     <button type="submit" class="btn btn-block btn-primary">Sign Up</button>
                 </form>
             </div>
-            <div class="tab-pane fade" id="signin" role="tabpanel" aria-labelledby="signin-tab"></div>
+            <div class="tab-pane fade" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+                <form @submit.prevent="signin">
+                    <div class="form-group">
+                        <input type="text" v-model="username" id="username" class="form-control" placeholder="Username" required>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="password" v-model="password" id="password" class="form-control" placeholder="PAssword" required>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-primary"> Sign In </button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
 </template>
+
+<script>
+    const $ = window.jQuery
+
+    export default {
+
+        data(){
+            return {
+                email:'', username:'', password: ''
+            }
+        }
+    }
+</script>
+<style scoped>
+#auth-container{
+    margin-top: 50px;
+}
+.tab-content {
+    padding-top: 20px;
+}
+</style>
