@@ -47,4 +47,21 @@ class ChatSessionView(APIView):
         ]
         # function that makes the owner th first member of the group
         members.insert(0,owner)
-        
+
+        return Response({
+            'status': 'SUCCESS', 'members': members,
+            'message': '%s joined this chat' %user.username,
+            'user': deserialize_user(user)
+        })
+
+class ChatSessionMessageView(APIView):
+    '''
+    Create/get chat session messages 
+    '''
+
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def get(self, request, *args, **kwargs):
+        '''
+        return all messages in a chat session
+        '''
