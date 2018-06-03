@@ -8,24 +8,25 @@ Vue.use(Router)
 const router = new Router({
   routes: [
     {
-      path:'/chats',
+      path: '/chats',
       name: 'Chat',
       component: Chat
     },
     {
       path: '/auth',
       name: 'UserAuth',
-      component:UserAuth
+      component: UserAuth
     }
   ]
 })
 
-router.beforeEach((to,from, next)=>{
-  if (sessionStorage.getItem('authToken') !== null || to.path == '/auth'){
+router.beforeEach((to, from, next) => {
+  if (sessionStorage.getItem('authToken') !== null || to.path === '/auth')
+  {
     next()
   }
   else {
-  next('/auth')
-}
+    next('/auth')
+  }
 })
 export default router

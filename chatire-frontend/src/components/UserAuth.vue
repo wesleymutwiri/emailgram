@@ -56,11 +56,11 @@
 <script>
     const $ = window.jQuery
 
-    export default {
+export default {
 
-        data(){
-            return {
-                email:'', username:'', password: ''
+    data() {
+        return {
+            email: '', username: '', password: ''
             }
         }
     }
