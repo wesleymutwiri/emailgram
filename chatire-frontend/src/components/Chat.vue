@@ -143,8 +143,34 @@ li {
 }
 
 .speech-bubble {
-    
+    display: inline-block;
+    position: relative;
+    border-radius: 0.4em;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 14px;
 }
+
+.subtle-blue-gradient {
+    background: linear-gradient(45deg,#004bff, #007bff);
+}
+
+.speech-bubble-user:after {
+    content: "";
+    position: absolute;
+    right: 4px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-left-color: #007bff;
+    border-right: 0;
+    border-top: 0;
+    margin-top: -10px;
+    margin-right: -20px;
+}
+
+
 
 </style>
 
