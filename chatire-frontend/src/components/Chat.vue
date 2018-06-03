@@ -170,6 +170,23 @@ li {
     margin-right: -20px;
 }
 
+.speech-bubble-peer:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-right-color: #ffffff;
+    border-top: 0;
+    border-left: 0;
+    margin-top: -10px;
+    margin-left: -20px;
+    
+}
+
+
 
 
 </style>
