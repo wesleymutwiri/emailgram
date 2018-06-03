@@ -99,3 +99,52 @@
         }
     }
 </script>
+
+
+<style scoped>
+h1, h2 {
+    font-weight: normal;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.card-footer inputext[type="t"] {
+    background-color: #ffffff;
+    color: #444444;
+    padding: 7px;
+    font-size: 13px;
+    border: 2px solid #cccccc;
+    width: 100%;
+    height: 30px;
+}
+
+.card-header a {
+    text-decoration: underline;
+}
+
+.card-body {
+    background-color: #ddd;
+    margin-top: -15px;
+    margin-bottom: -5px;
+    height: 380px;
+    overflow-y: auto;
+}
+
+.speech-bubble {
+    
+}
+
+</style>
+
