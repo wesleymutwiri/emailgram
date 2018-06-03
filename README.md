@@ -1,10 +1,15 @@
-# chatire
+# Emailgram
+
 ## By **Wesley Mutwiri**
+
 ## Live Demo
+
 coming soon
+
 ## Description
 
 ## Setup and Installation Requirements
+
 1. Open your default web browser
 2. Internet connection is required
 3. Search for wesleymutwiri on github and click on the repository chatire
