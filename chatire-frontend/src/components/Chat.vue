@@ -124,10 +124,14 @@
                     {
                     this,messages.push(data)
                     this.message= ''
-                }
+                })
+                .fail((response)=> {
+                    alert(response.responseText)
+                })
             }
         }
     }
+}
 </script>
 
 
