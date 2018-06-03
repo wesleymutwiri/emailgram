@@ -23,4 +23,15 @@ class ChatSessionView(APIView):
             'status': 'SUCCESS','uri':chat_session.uri,
             'message': 'New chat session created'
         })
-    def 
+    
+    def patch(self, request, *args, **kwargs):
+        '''
+        Add a user to a chat session
+        '''
+        User = get_user_model()
+        uri = kwargs['uri']
+        username = request.data['username']
+        user = User.objects.get(username=username)
+        chat_session = ChatSession.objects.get(uri=uri)
+        owner = chat_session.owner 
+        
