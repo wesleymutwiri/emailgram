@@ -79,4 +79,17 @@
         </div>
     </div>
 </template>
+<script>
+    const $ = window.jQuery
 
+    export default {
+        data () {
+            return {
+                sessionStarted: false
+            }
+        },
+        created () {
+            th
+        }
+    }
+</script>
